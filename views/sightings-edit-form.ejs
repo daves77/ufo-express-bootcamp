@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/bootstrap.min.css">
+  <title>UFO Sightings Form</title>
+</head>
+
+<body>
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="col-6">
+      <div class="card shadow-lg p-4">
+        <div class="p-6">
+          <h1>Sightings Form</h1>
+          <form action="/sighting" method="POST">
+            <div class="form-group mb-3">
+              <label for="date_time">Date</label>
+              <input type="datetime-local" name="date_time" class="form-control" id="date_time">
+            </div>
+            <div class="form-group mb-3">
+              <label for="State">State</label>
+              <input type="text" class="form-control" name="state" id="State" placeholder="e.g Singapore">
+            </div>
+            <div class="form-group mb-3">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="e.g Singapore">
+            </div>
+            <div class="form-group mb-3">
+              <label for="duration">Duration</label>
+              <input type="text" class="form-control" id="duration" name="duration" placeholder="e.g 5 minutes">
+            </div>
+            <div class="form-group mb-3">
+              <label for="shape">Shape</label>
+              <input type="text" id="shape" name="shape" class="form-control" id="shape"
+                placeholder="e.g fireball shaped">
+            </div>
+            <div class="form-group mb-3">
+              <label for="summary">Summary</label>
+              <input type="text" name="summary" class="form-control" id="summary">
+            </div>
+            <div class="form-group mb-3">
+              <label for="text">Text</label>
+              <textarea type="textbox" name="text" class="form-control" id="text"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
