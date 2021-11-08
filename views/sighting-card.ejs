@@ -1,19 +1,56 @@
-<div class="card shadow p-4">
-  <div class="d-flex justify-content-between alight-items-center">
-    <div>
-      Date
-      <% if (date_time){ %>
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card shadow p-4 bg-dark h-100">
+    <div class="d-flex flex-column justify-content-between h-100">
+      <table>
+        <tr>
+          <th>Date:</th>
+          <% if (date_time){ %>
+            <td>
+              <%= date_time %>
+            </td>
+            <% } %>
+        </tr>
+        <tr>
+          <th>State:</th>
+          <td>
+            <%= state %>
+          </td>
+        </tr>
+        <tr>
+          <th>City:</th>
+          <td>
+            <%= city %>
+          </td>
+        </tr>
+        <tr>
+          <th>Shape:</th>
+          <td>
+            <%= shape %>
+          </td>
+        </tr>
+        <tr>
+          <th style="vertical-align:top">Summary:</th>
+          <td class="ml-2">
+            <%= summary %>
+          </td>
+        </tr>
+      </table>
 
-        <%= date_time %>
-          <% } %>
-    </div>
-    <div>
-      State
-      <%= state %>
-    </div>
-    <div>
-      City
-      <%= city %>
+      <div class="">
+        <div class="d-flex justify-content-around mt-4 ">
+          <a href="/sighting/<%= index %> ">
+            <div>
+              <button class="bg-dark">View</button>
+            </div>
+          </a>
+
+          <form action="/sighting/<%= index %>/delete?_method=DELETE" method="POST">
+            <div>
+              <button type="submit" class="bg-dark">Delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto:wght@900&display=swap");
+
+body {
+    background-image: url("/space.jpeg");
+    background-size: cover;
+    background-color: black;
+}
+
+* {
+    font-family: "Major Mono Display", monospace;
+    color: #39ff14;
+}
+
+a {
+    text-decoration: none;
+    color: #39ff14;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+    margin: 0;
+}

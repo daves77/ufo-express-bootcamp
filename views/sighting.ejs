@@ -6,33 +6,83 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
   <title>Document</title>
 </head>
 
 <body>
-  <div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="col-12 col-md-6">
-      <div class="card p-4">
+  <%- include('navbar') %>
 
-        <div>
-          <div class="">
-            <div class="d-inline">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+      <div class="text-center rotate">
+        <h1>Sighting <%- Number(index) + 1 %>
+        </h1>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card p-4 bg-dark">
 
-              Date
-              <%= date_time %>
-            </div>
-          </div>
-          <div class="">
-            <div class="d-inline">
+          <table>
+            <tr>
+              <th>Created:</th>
+              <% if (date_time){ %>
+                <td>
+                  <%= date_time %>
+                </td>
+                <% } %>
+            </tr <tr>
+            <th>Spotted:</th>
+            <% if (date_time){ %>
+              <td>
+                <%= date_time %>
+              </td>
+              <% } %>
+                </tr <tr>
+                <th>State:</th>
+                <td>
+                  <%= state %>
+                </td>
+                </tr>
+                <tr>
+                  <th>City:</th>
+                  <td>
+                    <%= city %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Shape:</th>
+                  <td>
+                    <%= shape %>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="vertical-align:top">Summary:</th>
+                  <td class="ml-2">
+                    <%= summary %>
+                  </td>
+                </tr>
+                <tr>
+                  <th style="vertical-align:top">Description:</th>
+                  <td class="ml-2">
+                    <%= text %>
+                  </td>
+                </tr>
+          </table>
+          <div class="d-flex justify-content-around mt-4 ">
+            <a href="/sighting/<%= index %>/edit ">
+              <div>
+                <button class="bg-dark">Edit</button>
+              </div>
+            </a>
 
-              Date
-              <%= date_time %>
-            </div>
+            <form action="/sighting/<%= index %>/delete?_method=DELETE" method="POST">
+              <div>
+                <button type="submit" class="bg-dark">Delete</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
