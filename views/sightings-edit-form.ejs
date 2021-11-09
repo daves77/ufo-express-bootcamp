@@ -20,31 +20,33 @@
             <form action="/sighting/<%= index %>/edit?_method=PUT" method="POST">
               <div class="form-group mb-3">
                 <label for="date_time">Date</label>
-                <input type="datetime-local" name="date_time" value=<%=date_time %> class="form-control" id="date_time">
+                <input required type="datetime-local" name="date_time" value=<%=date_time %> class="form-control"
+                id="date_time">
               </div>
               <div class="form-group mb-3">
                 <label for="State">State</label>
-                <input type="text" class="form-control" name="state" value=<%=state %> id="State" placeholder="e.g
+                <input required type="text" class="form-control" name="state" value=<%=state %> id="State"
+                placeholder="e.g
                 Singapore">
               </div>
               <div class="form-group mb-3">
                 <label for="city">City</label>
-                <input type="text" class="form-control" id="city" name="city" value=<%=city %> placeholder="e.g
+                <input required type="text" class="form-control" id="city" name="city" value=<%=city %> placeholder="e.g
                 Singapore">
               </div>
               <div class="form-group mb-3">
                 <label for="duration">Duration</label>
-                <input type="text" class="form-control" id="duration" name="duration" value=<%=duration %>
+                <input required type="text" class="form-control" id="duration" name="duration" value=<%=duration %>
                 placeholder="e.g 5 minutes">
               </div>
               <div class="form-group mb-3">
                 <label for="shape">Shape</label>
-                <input type="text" id="shape" name="shape" value=<%=shape %> class="form-control" id="shape"
+                <input required type="text" id="shape" name="shape" value=<%=shape %> class="form-control" id="shape"
                 placeholder="e.g fireball shaped">
               </div>
               <div class="form-group mb-3">
                 <label for="summary">Summary</label>
-                <input type="text" name="summary" class="form-control" value=<%=summary %> id="summary">
+                <input required type="text" name="summary" class="form-control" value=<%=summary %> id="summary">
               </div>
               <div class="form-group mb-3">
                 <label for="text">Text</label>
