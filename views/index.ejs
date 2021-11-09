@@ -10,9 +10,9 @@
   <title>Document</title>
 </head>
 
-<body class="">
+<body class="overflow">
   <%- include('navbar') %>
-    <div class="container py-8">
+    <div class="container py-12">
 
       <div class="d-flex justify-content-center w-100">
         <img src="alien.gif" alt="">
@@ -21,7 +21,7 @@
         <h1>WELCOME TO UFO SIGHTINGS</h1>
         <p>View or add to our existing database of encounters with the unknown!</p>
       </div>
-      <div class="row">
+      <div class="row py-4">
         <% sightings.forEach((sighting, index)=> { %>
           <%- include('sighting-card', {...sighting, index}) %>
             <% }) %>

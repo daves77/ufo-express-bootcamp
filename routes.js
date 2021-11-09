@@ -27,7 +27,7 @@ export const getSightingByIndex = (req, res) => {
 };
 
 export const postSightingForm = (req, res) => {
-  add('sightings', req.body, (err, data) => {
+  add('sightings', { ...req.body, date_created: new Date() }, (err, data) => {
     const parsedData = JSON.parse(data);
     res.redirect(`/sighting/${parsedData.sightings.length - 1}`);
   });
